@@ -10,4 +10,12 @@ def test_dimensions():
 
 def test_norm():
     v = Vector([3,4])
-    assert v.norm() == 5
+    assert v.norm == 5
+
+def test_unit_vector():
+    v = Vector([1,2,3])
+    assert v.unit_vector().norm == 1.0
+
+def test_scale():
+    v = Vector([1,2,3])
+    assert v.scale(3) == Vector([3,6,9])
